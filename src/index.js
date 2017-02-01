@@ -47,7 +47,7 @@ const broadcast = (data) =>
     });
 
 router.post('/buy', ctx => {
-    const headers = ctx.request.headers;
+    const headers = ctx.request.body;
     console.log("body: " + JSON.stringify(headers));
     const name = headers.name;
     const quantity = headers.quantity;
@@ -74,7 +74,7 @@ router.post('/buy', ctx => {
 });
 
 router.post('/sell', ctx => {
-    const headers = ctx.request.headers;
+    const headers = ctx.request.body;
     console.log("body: " + JSON.stringify(headers));
     const name = headers.name;
     const quantity = headers.quantity;
